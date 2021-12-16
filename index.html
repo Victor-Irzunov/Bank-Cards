@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Notebook</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="block">
+
+    <div class="block__header">
+      <h2>My cards</h2>
+      <i 
+      class="fa fa-plus" 
+      aria-hidden="true"
+      onclick="openModalAddCard()"
+      ></i>
+    </div>
+
+    <div class="block__list"></div>
+
+    <div class="block__add">
+      <i 
+      class="fas fa-times" 
+      aria-hidden="true" 
+      onclick="closeModalAddCard()"
+      ></i>
+      <div class="add__card">
+        <h3 class="bank__name">Bank Name</h3>
+
+        <div class="number__card">
+          <input type="text" maxlength="4" placeholder="4321">
+          <input type="text" maxlength="4">
+          <input type="text" maxlength="4">
+          <input type="text" maxlength="4">
+          <span class="instructions">4321</span>
+        </div>
+
+        <div class="date">
+          <span class="instructions date__valid">Valid Thru</span>
+          <input type="text" maxlength="5" placeholder="00/00">
+          <span class="instructions date__valid">CCV</span>
+          <input type="text" maxlength="3" placeholder="123">
+        </div>
+
+        <div class="name">
+          <input class="full-name" type="text" maxlength="" inputmode='numeric' placeholder="First name Last name">
+          <span class="instructions">Name on Card</span>
+        </div>
+        <button 
+        type="button"
+        class="btn__add"
+        >
+        + Add
+      </button>
+        <div class="shine"></div>
+        <div class="shine shine-layer-two"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="https://use.fontawesome.com/e298d7de39.js"></script>
+  <script src="./js.js"></script>
+</body>
+
+</html>
