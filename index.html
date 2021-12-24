@@ -1,74 +1,100 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ru">
 <head>
-  <title>Notebook</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Notebook</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 </head>
 
 <body>
-  <div class="block">
+<div class="block">
+    <div class="container">
+        <div class="block__header">
+            <h2>My cards</h2>
+            <i
+                    class="fa fa-plus"
+                    aria-hidden="true"
+                    onclick="openModalAddCard()"
+            ></i>
+        </div>
 
-    <div class="block__header">
-      <h2>My cards</h2>
-      <i 
-      class="fa fa-plus" 
-      aria-hidden="true"
-      onclick="openModalAddCard()"
-      ></i>
+        <div class="block__list"></div>
+
+        <div class="block__add">
+            <i
+                    class="fas fa-times"
+                    aria-hidden="true"
+                    onclick="closeModalAddCard()"
+            ></i>
+            <div class="card card2">
+                <div class="face front add__card_fon">
+                    <h3 class="debit">Card</h3>
+                    <h3 class="bank__name">New Card</h3>
+                    <img src="./images/chip.png" class="chip">
+                    <i class="fas fa-wifi" aria-hidden="true"></i>
+                    <h3 class="number2">#### #### #### ####</h3>
+                    <h5 class="valid"><span>Valid<br>Thru</span><span>12/23</span></h5>
+                    <h5 class="card__holder">Name</h5>
+                    <img class="logo__card" src=''>
+                </div>
+                <div class="face back add__card_fon">
+                    <div class="black__bar"></div>
+                    <div class="ccvText">
+                        <h5>Authorized Signature-not valid unless signed</h5>
+                        <div class="white__bar"></div>
+                        <div class="ccv">123</div>
+                    </div>
+                    <p class="text__commit text__text"></p>
+
+
+                </div>
+            </div>
+            <div class="form">
+                <form name="form">
+                    <div class="number__card">
+                        <span class="instructions">4321</span>
+                        <input
+                                type="text"
+                                title="maximum of 16 digits"
+                                minlength="19"
+                                maxlength="19"
+                                name="numCard"
+                                required
+                        >
+                        <span class="valid__err"></span>
+                    </div>
+                </form>
+                <div class="name">
+                    <span class="instructions">Comment</span>
+                    <textarea
+                            maxlength="1024"
+                            name="commit"
+                            placeholder="Comment max 1024 characters"
+                            cols="67"
+                            rows="4"
+                            class="commit"
+                    ></textarea>
+                </div>
+                <button
+                        type="button"
+                        class="btn__add"
+                        onclick="addCard()"
+                >
+                    + ADD
+                </button>
+                <div class="shine"></div>
+                <div class="shine shine-layer-two"></div>
+            </div>
+        </div>
     </div>
+</div>
 
-    <div class="block__list"></div>
-
-    <div class="block__add">
-      <i 
-      class="fas fa-times" 
-      aria-hidden="true" 
-      onclick="closeModalAddCard()"
-      ></i>
-      <div class="add__card">
-        <h3 class="bank__name">Bank Name</h3>
-
-        <div class="number__card">
-          <input type="text" maxlength="4" placeholder="4321">
-          <input type="text" maxlength="4">
-          <input type="text" maxlength="4">
-          <input type="text" maxlength="4">
-          <span class="instructions">4321</span>
-        </div>
-
-        <div class="date">
-          <span class="instructions date__valid">Valid Thru</span>
-          <input type="text" maxlength="5" placeholder="00/00">
-          <span class="instructions date__valid">CCV</span>
-          <input type="text" maxlength="3" placeholder="123">
-        </div>
-
-        <div class="name">
-          <input class="full-name" type="text" maxlength="" inputmode='numeric' placeholder="First name Last name">
-          <span class="instructions">Name on Card</span>
-        </div>
-        <button 
-        type="button"
-        class="btn__add"
-        >
-        + Add
-      </button>
-        <div class="shine"></div>
-        <div class="shine shine-layer-two"></div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-  <script src="https://use.fontawesome.com/e298d7de39.js"></script>
-  <script src="./js.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script src="https://use.fontawesome.com/e298d7de39.js"></script>
+<script src="./js.js"></script>
 </body>
 
 </html>
